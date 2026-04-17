@@ -1,19 +1,46 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('fonts/Quicksand-VariableFont_wght.ttf') format('truetype-variations'); 
+    font-weight: 100 900; 
+    font-style: normal;
+}
+
 * {
 	margin:  0px;
 	padding:  0px;
 	box-sizing: border-box;
 }
 
-/* adjusting fonts */
-
-body {
-	font-family: -apple-system, BlinkMacSystemFont, helvetica, arial, sans-serif;
-	transition: background 500ms ease;
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: dark purple;
 }
 
-p, li {
-	font-size:  22px;
-	line-height: 30px;
+a:hover {
+    color: #CEDE54;
+}
+
+/* 3. 클릭했을 때 */
+a:active {
+    color: red;
+}
+
+divider {
+	font-size: 20px;
+}
+
+body {
+	font-family: Quicksand;
+	font-weight: 200;
+	font-size: 12px;
+	transition: background 500ms ease;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+li {
+	font-size:  15px;
+	line-height: 25px;
 }
 
 /* adjusting spacing */
@@ -22,8 +49,13 @@ p, li {
 	padding: 20px;
 }
 
-h1, p {
+h1{
+	font-size: 30px;
 	margin-bottom:  20px;
+}
+
+p {
+	line-height: 12px;
 }
 
 ul, ol {
