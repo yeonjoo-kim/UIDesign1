@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Ascii Town: Yeonjoo</title>
-        <link rel="stylesheet" type="text/css" href="ASCII/ascii_asset.css/ascii_style.css">
+        <link rel="stylesheet" type="text/css" href="../assets/style.css">
 
             <style>
         a {
@@ -15,10 +15,16 @@
         a:active {
         color: red;
     }
+        body > a {
+            color: var(--text);
+        }
     </style>
 
     </head>
     <body>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Turn on dark mode" title="Dark mode">
+            <span class="theme-icon" aria-hidden="true">D</span>
+        </button>
         <a href="ascii_interior.html">
             <pre>
                         퉕퉕퉕퉕퉕퉕퉕퉕퉕/\                         
@@ -77,6 +83,6 @@
             <p><a href="../index.html">< HOME</a></p>
         </ul>
 
+    <script src="../assets/theme.js"></script>
     </body>
     </html>
-
