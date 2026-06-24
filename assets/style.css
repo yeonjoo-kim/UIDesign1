@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand-VariableFont_wght.ttf') format('truetype-variations'); 
+    font-weight: 100 900; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hershey Parade';
+    src: url('fonts/Hershey-Noailles-parade.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hershey Futural Mono Handles';
+    src: url('fonts/Hershey-Noailles-futural-mono-14-2.5-handles.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hershey Futural Mono';
+    src: url('fonts/Hershey-Noailles-futural-mono-14-2.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hershey HelpMe';
+    src: url('fonts/Hershey-Noailles-HelpMe-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hershey Times Mono';
+    src: url('fonts/Hershey-Noailles-Times-Mono-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arkdes Hershey 17';
+    src: url('fonts/Arkdes-Hershey-17.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OCR PBI Newsletter';
+    src: url('fonts/Ocr-Pbi-newsletter.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chocolate Child';
+    src: url('fonts/CHOCOLATE-child.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --site-font: 'Hershey Futural Mono';
+    --background: #F4FF81;
+    --text: #211c2b;
+    --muted: #6d6477;
+    --link: #5c3b8a;
+    --link-hover: #7b8b15;
+    --link-active: #d43f3f;
+    --panel: #ffffff;
+    --border: #ddd6e8;
+    --button-text: #211c2b;
+}
+
+:root[data-theme="dark"] {
+    --background: #3F281C;
+    --text: #f3efe7;
+    --muted: #c7bcce;
+    --link: #d7c1ff;
+    --link-hover: #ddeb72;
+    --link-active: #ff7c7c;
+    --panel: #1b1c24;
+    --border: #3a3448;
+    --button-text: #f3efe7;
+}
+
+* {
+	margin:  0px;
+	padding:  0px;
+	box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: var(--link);
+    transition: color 180ms ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+/* 3. 클릭했을 때 */
+a:active {
+    color: var(--link-active);
+}
+
+.divider {
+    border-top: 1px solid var(--border);
+	font-size: 20px;
+    margin: 24px 0;
+    width: min(480px, 100%);
+}
+
+body {
+	font-family: var(--site-font), Quicksand, sans-serif;
+	font-weight: 200;
+	font-size: 12px;
+    color: var(--text);
+    background: var(--background);
+	transition: background 500ms ease, color 500ms ease;
+    min-height: 100vh;
+	margin: 10px;
+}
+
+li {
+	font-size:  15px;
+	line-height: 1.65;
+}
+
+/* adjusting spacing */
+
+#grid {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1.2fr);
+    gap: clamp(36px, 8vw, 120px);
+    align-items: stretch;
+    padding: 20px 72px 96px 20px;
+}
+
+#left-column,
+#right-column {
+    min-width: 0;
+    height: 100%;
+}
+
+#left-column {
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+	font-size: 30px;
+    line-height: 3em;
+	margin-bottom:  15px;
+}
+
+h2 {
+    color: var(--text);
+    font-size: 18px;
+    line-height: 3em;
+    margin-bottom: 8px;
+}
+
+h3 {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 3em;
+    margin: 14px 0 3px;
+}
+
+p {
+	line-height: 12px;
+}
+
+ul, ol {
+	margin-left: 20px;
+}
+
+.project-links {
+    max-width: 680px;
+}
+
+.project-links ol,
+.additional-work ol {
+    margin-bottom: 10px;
+}
+
+.project-links a,
+.additional-work a {
+    word-break: keep-all;
+}
+
+.additional-work {
+    margin-top: 36px;
+}
+
+.works {
+    display: inline-block;
+    color: var(--text);
+}
+
+#exercises {
+    margin-top: 0.5em;
+}
+
+.theme-toggle {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    border: 0;
+    color: var(--button-text);
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0;
+    transition: color 250ms ease, transform 180ms ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--link-hover);
+    outline-offset: 3px;
+}
+
+.instagram-glyph {
+    position: fixed;
+    left: var(--glyph-x, 50vw);
+    top: var(--glyph-y, 50vh);
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 81px;
+    height: 81px;
+    color: var(--text);
+    font-family: 'Hershey Parade', serif;
+    font-size: 63px;
+    line-height: 1;
+    text-decoration: none;
+    transform: translate(-50%, -50%) rotate(var(--glyph-rotate, 0deg));
+    transition: left 4800ms cubic-bezier(0.45, 0, 0.2, 1), top 4800ms cubic-bezier(0.45, 0, 0.2, 1), transform 4800ms cubic-bezier(0.45, 0, 0.2, 1), color 220ms ease;
+}
+
+.instagram-glyph:hover {
+    color: #D7FFF9;
+}
+
+img {
+	max-width: 100%;
+	height:  auto;
+}
+
+@media (max-width: 720px) {
+    #grid {
+        display: block;
+        padding: 20px 20px 92px;
+    }
+
+    #left-column {
+        max-width: none;
+    }
+
+    .project-links,
+    .additional-work {
+        max-width: none;
+    }
+
+    .project-links {
+        margin-top: 28px;
+    }
+
+    .additional-work {
+        margin-top: 28px;
+    }
+}
+
+/* uncomment the code below to set the grid */
+
+/*#grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+body {
+	overflow: hidden;
+}
+
+.scroll {
+	padding:  20px;
+	overflow: scroll;
+	height: 100vh;
+}
+
+#left-column {
+}
+
+#right-column {
+	background: #333;
+}*/
